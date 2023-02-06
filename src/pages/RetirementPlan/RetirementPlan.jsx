@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Button } from "../../utils";
 import Faq from "../../components/Faq";
 import crown from "../../assets/crown.png";

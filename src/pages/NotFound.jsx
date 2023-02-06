@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import notfound from '../assets/notfound.png'
 import { Button } from '../utils';
 
