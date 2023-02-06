@@ -10,7 +10,7 @@ import ReactGa from "react-ga";
 
 import './App.css';
 
-const Traking_Id="UA-227723739-2";
+const Traking_Id="UA-227723739-3";
 ReactGa.initialize(Traking_Id);
 
 
