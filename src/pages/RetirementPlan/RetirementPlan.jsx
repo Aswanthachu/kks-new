@@ -12,7 +12,6 @@ import {
 } from "../../utils/constants";
 
 import CoverVideo from "../../assets/CoverVideo.mp4";
-import { useEffect } from "react";
 
 import ReactGA from "react-ga";
 
