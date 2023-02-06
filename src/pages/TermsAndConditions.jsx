@@ -1,7 +1,15 @@
 import React from 'react'
-import Container from '../components/Container'
+import Container from '../components/Container';
+
+import ReactGA from "react-ga";
+
 
 const TermsAndConditions = () => {
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <section className='container mx-auto'>
       <div className='flex justify-center my-24 sm:w-full'>

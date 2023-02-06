@@ -1,7 +1,14 @@
 import React from 'react'
-import { Container } from '../components'
+import { Container } from '../components';
+
+import ReactGA from "react-ga";
 
 const Refund = () => {
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
    <section>
      <div className='flex justify-center my-24 sm:w-full'>

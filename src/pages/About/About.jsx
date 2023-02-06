@@ -1,12 +1,19 @@
 import React , {useEffect} from "react";
 import { Banner, Container, ContainerTwo } from '../../components';
 import aboutman from "../../assets/aboutman.png";
-import meettheteam from "../../assets/meettheteam.png"
+import meettheteam from "../../assets/meettheteam.png";
+
+import ReactGA from "react-ga";
 
 const About = () => {
   useEffect(()=>{
     window.scroll(0,0)
   })
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <>
     <section className='container-full'>

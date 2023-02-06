@@ -2,11 +2,17 @@ import React, { useEffect } from "react";
 import Iphone from "../../assets/Iphone.png";
 import { Button } from "../../utils";
 
+import ReactGA from "react-ga";
 
 const Auth = ({ auth }) => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <>
       <section className="flex flex-col lg:flex-row md:mx-32 mt-16 mx-10 lg:ml-[10%]">

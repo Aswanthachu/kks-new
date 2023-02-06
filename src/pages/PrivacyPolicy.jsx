@@ -2,10 +2,18 @@ import React, { useEffect } from 'react';
 
 import { Container } from '../components';
 
+import ReactGA from "react-ga";
+
+
 const PrivacyPolicy = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <section>
       <div className='flex justify-center my-24 sm:w-full'>

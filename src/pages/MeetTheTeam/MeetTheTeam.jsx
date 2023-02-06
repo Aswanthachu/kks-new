@@ -8,10 +8,18 @@ import Mtt5 from "../../assets/Mtt5.png";
 import Mtt6 from "../../assets/Mtt6.png";
 import TeamCardH from "../../components/TeamCard/TeamCardH";
 import TeamCardV from "../../components/TeamCard/TeamCardV";
+
+import ReactGA from "react-ga";
+
 const MeetTheTeam = () => {
   useEffect(()=>{
     window.scroll(0,0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <>
       <div className="">

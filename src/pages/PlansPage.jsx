@@ -1,17 +1,25 @@
-import React , {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { TextBanner, Services, CardSection } from '../components'
 import { Button } from '../utils';
 import { plansPageList } from "../utils/constants";
-import plansPageLaptop from "../assets/plansPageLaptop.png"
+import plansPageLaptop from "../assets/plansPageLaptop.png";
+
+import ReactGA from "react-ga";
+
 const PlansPage = () => {
-  useEffect(()=>{
-    window.scroll(0,0)
-  })
+  useEffect(() => {
+    window.scroll(0, 0)
+  });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, [])
+
   return (
     <>
 
 
-      
+
 
       <div className='container-full my-20 h-auto'>
         <div className='container mx-auto'>
@@ -35,11 +43,11 @@ const PlansPage = () => {
               path="/signup"
             /> */}
             <Button path="/services" text={"See Our Plans "} className="btn2" icon={<svg className='w-[15px] h-[15px] ml-3' width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.910156 17.4201L7.43016 10.9001C8.20016 10.1301 8.20016 8.87008 7.43016 8.10008L0.910156 1.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>} ></Button>
+              <path d="M0.910156 17.4201L7.43016 10.9001C8.20016 10.1301 8.20016 8.87008 7.43016 8.10008L0.910156 1.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>} ></Button>
           </div>
         </div>
-       
+
 
         <div className='container-full mt-10 flex flex-col'>
           <div className='container mx-auto flex flex-wrap'>
@@ -62,14 +70,14 @@ const PlansPage = () => {
               path="/signup"
             /> */}
             <Button path="/services" text={"See Our Plans "} className="btn2 " icon={<svg className='w-[15px] h-[15px] ml-3' width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.910156 17.4201L7.43016 10.9001C8.20016 10.1301 8.20016 8.87008 7.43016 8.10008L0.910156 1.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>} ></Button>
+              <path d="M0.910156 17.4201L7.43016 10.9001C8.20016 10.1301 8.20016 8.87008 7.43016 8.10008L0.910156 1.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>} ></Button>
           </div>
 
         </div>
 
       </div>
-     
+
       <div className='container-full relative w-full h-[10px] md:h-[350px] lg:h-[450px]'>
         <img
           src={plansPageLaptop}
@@ -77,19 +85,19 @@ const PlansPage = () => {
           className='md:flex hidden  absolute right-0 top-[-135px] md:top-[-110px] lg:top-[-250px] z-0 max-w-[250px]  md:max-w-[600px] lg:max-w-[900px] max-h-[700px]'
         />
       </div>
-      
-      
+
+
 
       <Services plans />
-     
-      
+
+
 
       <CardSection />
-     
+
 
       {/* Access Personal Dashboard Section */}
 
-            {/* <div className='container-full my-20 h-auto'>
+      {/* <div className='container-full my-20 h-auto'>
         <div className='container mx-auto'>
           <h1 className='text-4xl md:text-6xl font-semibold'>
             Get Access to your
@@ -145,12 +153,12 @@ const PlansPage = () => {
           className='absolute right-0 top-[-135px] md:top-[-110px] lg:top-[-250px] z-0 max-w-[250px]  md:max-w-[600px] lg:max-w-[900px] max-h-[700px]'
         />
       </div> */}
-      
 
-            <TextBanner />
-           
-            </>
-          )
+
+      <TextBanner />
+
+    </>
+  )
 }
 
-          export default PlansPage
+export default PlansPage

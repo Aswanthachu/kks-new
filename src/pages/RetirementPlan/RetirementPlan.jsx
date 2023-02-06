@@ -14,10 +14,16 @@ import {
 import CoverVideo from "../../assets/CoverVideo.mp4";
 import { useEffect } from "react";
 
+import ReactGA from "react-ga";
+
 const RetirementPlan = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
 
   return (
     <>

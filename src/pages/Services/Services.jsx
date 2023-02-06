@@ -6,10 +6,17 @@ import readytoabout from "../../assets/readytoabout.png";
 import RetirementPlan from '../../assets/RetirementPlan.png'
 import Banner2 from "../../components/Banner2";
 import { Button } from "../../utils";
+
+import ReactGA from "react-ga";
+
 const Services = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
   // FAQ data
   const data = [
     {

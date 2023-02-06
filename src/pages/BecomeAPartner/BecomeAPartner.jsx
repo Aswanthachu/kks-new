@@ -4,11 +4,18 @@ import { Banner } from '../../components'
 import One from '../../assets/1.png'
 import Two from '../../assets/2.png'
 import Three from '../../assets/3.png'
-import Button from '../../utils/Button'
+import Button from '../../utils/Button';
+
+import ReactGA from "react-ga";
+
 const BecomeAPartner = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
 
   return (
     <>

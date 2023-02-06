@@ -1,4 +1,4 @@
-import React , {useEffect} from "react";
+import React, { useEffect } from "react";
 import { UsStockContainer } from '../components';
 
 import UsStockDiversity from "../assets/UsStockDiversity.png"
@@ -9,11 +9,17 @@ import Group from "../assets/Group.png";
 
 import { usMarketLogos } from "../utils/constants";
 
+import ReactGA from "react-ga";
+
 
 const BenefitsOfUsStocks = () => {
-    useEffect(()=>{
-        window.scroll(0,0)
-      })
+    useEffect(() => {
+        window.scroll(0, 0)
+    });
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, [])
     return (
         <section className='container-full flex items-center flex-col'>
             <div className={`w-[95%] flex mx-auto bg-plansBanner  lg:min-h-[calc(100vh-100px)] bg-cover bg-no-repeat my-5  justify-center p-10 flex-col text-white rounded-r-xl md:rounded-2xl lg:rounded-b-3xl mb-10 z-20`}>
@@ -54,7 +60,7 @@ const BenefitsOfUsStocks = () => {
 
             {/* oppertunities to invest in high potential companies */}
 
-            
+
             <div className='container relative  mx-auto  text-white lg:text-black lg:gap-10 mt-16 font-main px-2 md:px-0 hidden lg:flex'>
                 <div className='w-[100%] lg:w-[65%] flex-1 p-5  z-10 lg:z-0 absolute lg:relative flex md:justify-center md:items-center'>
                     <div className='flex my-auto flex-col'>
@@ -138,8 +144,8 @@ const BenefitsOfUsStocks = () => {
 
             <div className='container mx-auto'>
                 <h1 className='text-2xl md:text-3xl text-center justify-center leading-8 lg:text-4xl font-semibold'>
-                    Opportunity to <span className='text-darkBlue'>Invest in World's Great Corporations,</span><br/>
- That promote <span className='text-darkBlue'>a better future and Care our Planet</span>
+                    Opportunity to <span className='text-darkBlue'>Invest in World's Great Corporations,</span><br />
+                    That promote <span className='text-darkBlue'>a better future and Care our Planet</span>
                 </h1>
             </div>
 

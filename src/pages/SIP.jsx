@@ -7,6 +7,9 @@ import { Doughnut } from 'react-chartjs-2';
 
 import { SipFaq } from '../components';
 
+import ReactGA from "react-ga";
+
+
 ChartJs.register(
   ArcElement,
   Tooltip,
@@ -16,6 +19,10 @@ ChartJs.register(
 const SIP = () => {
   useEffect(()=>{
     window.scroll(0,0)
+  },[]);
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
   },[])
 
   const options = {

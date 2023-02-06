@@ -6,6 +6,8 @@ import emailjs from '@emailjs/browser';
 
 import { ResponsiveModal } from "../../components";
 
+import ReactGA from "react-ga";
+
 
 const Contact = () => {
   useEffect(()=>{
@@ -60,7 +62,11 @@ const Contact = () => {
       }, (error) => {
         console.log(error.text);
       });
-  }
+  };
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
 
   return (
   <>

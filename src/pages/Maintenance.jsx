@@ -2,10 +2,17 @@ import React ,{useEffect} from 'react';
 import maintainance from "../assets/maintainance.svg"
 import { Button } from '../utils';
 
+import ReactGA from "react-ga";
+
 const Maintenance = () => {
   useEffect(()=>{
     window.scroll(0,0)
-  })
+  });
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname);
+  },[])
+
   return (
     <section className='container-full flex justify-center items-center'>
       <div className='lg:w-[30%] lg:h-[30%] md:w-[60%] md:h-[60] text-center lg:text-start mx-auto'>
